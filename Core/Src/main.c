@@ -129,7 +129,7 @@ int main(void)
 	HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
 
 	/* %humidity = 100*sensordata/(1450-3550)-3550*/
-	humidity = (-100*((sensor_data-1450)/(3600-1450))+100) ;
+	humidity = (-100*((sensor_data-1440)/(3600-1440))+100) ;
 	LCD_clear(&LCD16x2_CfgParam);
 	LCD_write_string(&LCD16x2_CfgParam,"Humedad");
 	LCD_set_cursor(&LCD16x2_CfgParam, 5, 2);

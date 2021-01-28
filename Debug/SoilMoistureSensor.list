@@ -1337,7 +1337,7 @@ int main(void)
  8000fb0:	f002 fa7f 	bl	80034b2 <HAL_UART_Transmit>
 
 	/* %humidity = 100*sensordata/(1450-3550)-3550*/
-	humidity = (-100*((sensor_data-1450)/(3600-1450))+100) ;
+	humidity = (-100*((sensor_data-1440)/(3600-1440))+100) ;
  8000fb4:	edd7 7a0f 	vldr	s15, [r7, #60]	; 0x3c
  8000fb8:	ed9f 7a28 	vldr	s14, [pc, #160]	; 800105c <main+0x174>
  8000fbc:	ee37 7ac7 	vsub.f32	s14, s15, s14
@@ -1400,8 +1400,8 @@ int main(void)
  8001050:	08005f48 	.word	0x08005f48
  8001054:	2000024c 	.word	0x2000024c
  8001058:	08005f30 	.word	0x08005f30
- 800105c:	44b54000 	.word	0x44b54000
- 8001060:	45066000 	.word	0x45066000
+ 800105c:	44b40000 	.word	0x44b40000
+ 8001060:	45070000 	.word	0x45070000
  8001064:	c2c80000 	.word	0xc2c80000
  8001068:	42c80000 	.word	0x42c80000
  800106c:	08005f38 	.word	0x08005f38
